@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome in My Bio</title>
+    
+</head>
+<style class="text/css">
+
+*{
+    padding: 0; margin: 0; box-sizing: border-box;}
+#header{
+    background-image: url(m-webimg/b2.png);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: 50% 100%;
+    background-position: right;
+}
+.container{
+    margin: 0px 100px;
+}
+#logo{
+    width: 150px;
+    margin-top: 10px;
+}
+.header-text{
+    margin: 50px 0px;
+    max-width: 400px;
+}
+h1{color: #6c63ff;
+font-size: 40px;}
+ 
+ .header-text p{
+    padding: 10px 0px;
+    font-weight: bold;
+    font-size: 20px;  
+ }
+.common-btn{
+    padding: 10px 20px;
+    outline: none;
+    background: #6c63ff;
+    color: white ;
+    border: none;
+    border-radius: 10px ;
+    margin-top: 20px;
+}
+.common-btn:hover{
+    background: none;
+    color: black;
+    border: 1px solid #6c63ff;
+}
+.line{
+    line-height: 20px;
+    display: inline-block;
+}
+
+
+.line-1{ width: 12px;
+height: 12px;
+background: #6c63ff;}
+
+.line-2{ width: 80px;
+height: 1px;
+background: #6c63ff;}
+
+.line-3{ width: 120px;
+height: 1px;
+background: #6c63ff;}
+
+#menu{
+    width: 50px;
+    position: fixed;
+    top: 10px;
+    right: 100px;
+ z-index: 4;
+    cursor: pointer; 
+}
+#sidenav{
+    width: 300px;
+    height: 100vh;
+    padding-top: 50px;
+    position: fixed;
+    right: -300px; 
+    top: 0;
+    transition: 0.5s;
+    background-color: #6c63ff;
+}
+#sidenav li{
+    list-style: none;
+}
+#sidenav li a{
+    text-decoration: none;
+    color: white;
+    padding: 20px 40px;
+    display: block;
+    margin: 20px 30px;
+    font-weight: bold;
+}
+#sidenav li a:hover{
+ 
+ transition: 0.5s; 
+   background-color: rgba(255, 255, 255, 0.1);
+}
+#about{
+    padding: 100px 0px;
+}
+.about-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.about-left-col{
+    flex-basis: 50%;
+
+}
+.about-left-col img{
+    width: 100%;
+}
+.about-right-col{
+    flex-basis: 50%;
+    text-align: right;
+    margin-right: 100px;
+    max-width: 500px;
+}
+.about-right-col p{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0px;
+}
+.about-right-col h2{
+    font-size: 30px;
+    font-style: italic;
+}
+
+#features{
+    padding: 100px 0px;
+}
+.features-container{
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    flex-wrap: wrap;
+
+}
+
+.features-box{
+    flex-basis: 25%;
+    text-align: center;
+}
+.features-box img{
+    width: 100%;
+}
+
+.features-box h3{
+    font-size: 30px;
+    margin: 10px 0px;
+}
+
+.features-box p{
+    font-size: 20px;
+}
+
+#middle-btn{
+    text-align: center;
+}
+
+#contact{
+    padding: 100px 0px;
+}
+.contact-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.contact-left-col,.contact-right-col{
+    flex-basis: 50%;
+}
+.contact-left-col img{
+    width: 100%;
+}
+.contact-right-col {
+text-align: center;
+}
+
+form{
+    margin-top: 20px;
+}
+form input{
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+textarea{
+    width: 60%;
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+#footer{
+    padding: 100px 0px;
+}
+.footer-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-left-col, .footer-right-col{
+    flex-basis: 50%;
+}
+
+.footer-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-title h2{
+    color: #6c63ff;
+    margin-bottom: 10px;
+}
+
+.footer-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-copyright, .footer-logo{
+    flex-basis: 40%;
+
+}
+.footer-copyright{
+    text-align: right;
+}
+
+#xyz{
+    background-color: #6c63ff;
+    color: white;
+    height: 100px;
+}
+#xyz h2{
+    font-size: 40px;
+    text-align: center;
+}
+
+@media only screen and ( max-width:770px){
+
+    #header{
+    background: none;
+}
+.about-left-col{
+    flex-basis: 100%;
+
+}
+.about-left-col img{
+    width: 100%;
+
+}
+.about-right-col{
+    flex-basis: 100%;
+margin-right: 50px;
+}
+.features-box{
+    flex-basis: 100%;
+    margin: 0px 50px;
+}
+.features-box img{
+    width: 100%;
+}
+
+.contact-left-col,.contact-right-col{
+    flex-basis: 100%;
+}
+.contact-left-col img{
+    width: 100%;
+}
+.footer-left-col, .footer-right-col{
+    flex-basis: 100%;
+}
+.footer-right-col{
+    margin-top: 30px;
+}
+#menu{
+    width: 50px;
+    position: fixed;
+    top: 10px;
+    right: 20px;
+ z-index: 4;
+    cursor: pointer; 
+}
+
+}
+#btn-1 a{
+    background-color: white;
+}
+
+</style>
+
+<body> 
+    <!--Header Start-->
+<section id="header">
+<div class="container"> <img src="" alt="Logo" id="logo">
+<div class="header-text"> 
+    <h1> Welcome to MY Bio</h1> 
+    <div class="line-1">  </div>
+<p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo ad laboriosam corporis facilis, esse ullam vitae ratione tempore sint quo voluptatibus consequatur nemo at, maxime molestias totam dolorem hic non?</p>
+<button type="button " name="button" class="common-btn" > Read More</button>
+</div>  
+<div class="line"> 
+<div class="line-1">  </div> <br>
+<div class="line-2">  </div><br>
+<div class="line-3">  </div><br> 
+
+</div>
+</div>
+</section>
+
+<nav> 
+    <img src="m-webimg/menu.png" alt="Menu" id="menu">
+</nav>
+
+<section id="sidenav">
+    <ul>
+        <li> <a href="#"> Home</a> </li>
+            <li>  <a href="#"> About</a> </li>
+            <li>  <a href="#"> Features</a> </li>
+           
+            <li>  <a href="#"> Contact</a> </li>
+            <li>  <a href="#"> Info</a>  </li>
+        
+    </ul>
+
+</section>
+
+<!--About Section Start-->
+<section id="about">
+<div class="about-row">
+<div class="about-left-col">
+<img src="m-webimg/b.jpeg" alt="#6c63ff">
+</div>
+
+<div class="about-right-col">
+    <h1>About us</h1>
+    <div class="line-1" style="display: inline-block">  </div> <br>
+    <p>I'm Goutam and I'm a Web Developer
+        I am Goutam Singh pursuing Bachelors of Technology from NRI Group Of Institution, Bhopal. moving toward the journey to become Frontend web developer!I'm passionate about transforming tricky problems into engaging solution to create meaningful websites.</h2>
+</div>
+
+</div>
+
+</section>
+
+<!--About end-->
+
+
+<!-- # Features section Start -->
+
+<section id="features">
+
+    <div class="features-container">
+      <div class="features-box">
+<img src="m-webimg/a2.png" alt="#">
+<h3> Our Design </h3>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam velit quod amet, quaerat tenetur numquam illo, similique iste veritatis iusto sapiente sint laboriosam! Odit incidunt molestiae accusamus unde ratione officiis.</p>
+      </div>  
+      <div class="features-box">
+        <img src="m-webimg/a4.png" alt="#">
+<h3> Our Design </h3>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam velit quod amet, quaerat tenetur numquam illo, similique iste veritatis iusto sapiente sint laboriosam! Odit incidunt molestiae accusamus unde ratione officiis.</p>
+    </div>
+    <div class="features-box">
+        <img src="m-webimg/a7.png" alt="#">
+<h3> Our Videos </h3>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam velit quod amet, quaerat tenetur numquam illo, similique iste veritatis iusto sapiente sint laboriosam! Odit incidunt molestiae accusamus unde ratione officiis.</p>
+    </div>
+    </div>
+<section id="middle-btn">
+    <div class="line"> 
+        <div class="line-1">  </div> <br>
+        <div class="line-2">  </div><br>
+        <div class="line-3">  </div><br> 
+        </div>
+        &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button " name="button" class="common-btn" > Visit our Course</button>
+</section>
+
+</section>
+
+<!--Contact Section Start-->
+
+<section id="contact">
+
+<div class="contact-row">
+
+<div class="contact-left-col"> 
+    <img src="m-webimg/b3.png" alt="">
+</div>
+<div class="contact-right-col"> 
+    <h1>Connect with us </h1>
+    <form class="" action="index.html" method="post">
+        <input type="text" name="" value="" placeholder="Name">
+        <input type="text" name="" value="" placeholder="Email">
+        <textarea name="" id="" cols="80" rows="8"> </textarea> <br>
+        <button type="button " name="button" class="common-btn" > Send</button>
+    </form>
+</div>
+</div>
+</section>
+
+<!-- Footer end --> 
+<section id="footer">
+    <div class="footer-row container"> 
+
+<div class="footer-left-col">
+ <div class="footer-link">
+    <div class="footer-title"> 
+<h2> About us </h2>
+<p> Join us</p>
+<p>Request Demo</p>
+
+         </div>
+         <div class="footer-title"> 
+            <h2> Features </h2>
+            <p> our Plans</p>
+            <p>Tutorial</p>
+            
+                     </div>
+                     <div class="footer-title"> 
+                        <h2> Course  </h2>
+                       <p> Web designing</p>
+                        <p>Software Devlopment</p>
+                        
+                                 </div>
+                                 <div class="footer-title"> 
+                                    <h2> Support </h2>
+                                    <p><a href="https://www.facebook.com/goutamsingh.mewada.7"> facebook</a> </p>
+                                    <p> <a href="https://www.instagram.com/___g__m______/"> instagram</a> </p>
+                                <p> <a href="https://twitter.com/Gsm_rajput786"> Twitter</a></p>
+                                    
+                                             </div>
+ </div>
+</div>
+
+
+
+<div class="footer-right-col">
+  
+    <div class="footer-info">
+        <div class="footer-copyright">
+gsm44@gmail.com
+&copy; 2k22 GsM 
+        </div>
+        <div class="footer-logo">
+            <img src="#" alt=" Logo"> <br>
+            <button type="button " name="button" class="common-btn"  id="btn-1"> <a href="https://twitter.com/Gsm_rajput786"> Visit us </a> </button> 
+        </div>
+    </div>
+
+
+</div>
+    </div>
+    
+</section>
+<section id="xyz">
+    <h2>Developed by  <br> &hearts; Gsm Creation 44 &hearts; </h2>
+</section>
+
+
+
+<script>
+   var menu=document.getElementById('menu')
+    var sidenav=document.getElementById('sidenav')
+sidenav.style.right="-300px"; 
+menu.onclick=function(){
+    if (sidenav.style.right="-300px") {
+        sidenav.style.right="-0px";
+    } else{
+        sidenav.style.right="-300px";
+    } 
+}
+
+</script>
+
+
+</body>
+</html>
